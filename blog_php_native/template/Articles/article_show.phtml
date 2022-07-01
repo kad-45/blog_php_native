@@ -1,0 +1,22 @@
+<div class="card text-bg-dark mb-3">
+  <div class="card-header"><?php  echo "<h4>". $params["article"]->getTitle()."</h4>"; ?>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title">Créé par <?php echo $params["user"]->getLastname() . " " . $params["user"]->getFirstname() ?>
+      le <?php echo $params["article"]-> getPublishedDate(); ?></h6>
+    <div class=" col-12">
+      <p class="text-start fs-5">
+        <?php foreach ($params["category"] as $key => $category): ?>
+        <span class="badge rounded-pill text-bg-success" style=" margin-top:40px; margin-bottom:20px;">
+          <?php echo $category->getName(); ?></span>
+        <?php endforeach; ?>
+      </p>
+    </div>
+    <p class=" card-text"><?php echo $params["article"]->getContent(); ?>
+    </p>
+  </div>
+  <div>
+    <img src="<?php  echo $params["article"]->getFile_path_image(); ?>" class="rounded mx-auto d-block" alt="...">
+
+  </div>
+</div>

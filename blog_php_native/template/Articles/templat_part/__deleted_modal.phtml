@@ -1,0 +1,29 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Supprimer un article.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 style="background-color:red;color: white;font-size:18px;">Etes-vous sûr de supprimer cet article?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Fermer</button>
+        <form method="GET">
+          <!-- Les éléments input de type "hidden" permettent aux développeurs web d'inclure des données qui ne peuvent 
+          pas être vues ou modifiées lorsque le formulaire est envoyé.Sa valeur est envoyée au serveur.-->
+
+          <!-- un input:hidden stockant la page name= "page" value = "article_deleted" -->
+          <input type="hidden" name="page" value="article_deleted">
+          <!-- Un input : hidden ciblan l'id de l'article à supprimer  -->
+          <input type="hidden" id="article_deleted_id" name="article_id">
+          <!-- Un input:hidden permattant de supprimer l'article ciblé par son id -->
+          <input type="submit" class="btn btn-danger" value="supprimer">
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

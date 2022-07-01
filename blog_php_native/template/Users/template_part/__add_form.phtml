@@ -1,0 +1,42 @@
+<form method="POST">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationServer01">First name</label>
+      <input type="text" name="firstname" class="form-control is-valid" id="validationServer01" placeholder="First name"
+        value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServer02">Last name</label>
+      <input type="text" name="lastname" class=" form-control is-valid" id="validationServer02" placeholder="Last name"
+        value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServerUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        </div>
+        <input type="text" name="username" class="form-control is-invalid" id="validationServerUsername"
+          placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword6">Password</label>
+    <input type="password" name="password" id="inputPassword6" class="form-control xm-sm-3"
+      aria-describedby="passwordHelpInline">
+    <small id="passwordHelpInline" class="text-muted">
+      Must be 8-20 characters long.
+    </small>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>

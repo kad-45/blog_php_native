@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?page=article">Article</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?page=contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?page=user_add">Utilisateur</a>
+        </li>
+        <li class="nav-item">
+          <?php if(isset( $_SESSION['user_is_connected']) &&  $_SESSION['user_is_connected']){?> <a class="nav-link"
+            href="/?page=user_disconnect">Deconnexion</a>
+          <?php
+            }else{?>
+          <a class="nav-link" href="/?page=user_connexion">Connexion</a>
+          <?php } ?>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
